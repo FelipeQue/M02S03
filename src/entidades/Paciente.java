@@ -3,21 +3,38 @@ package entidades;
 import java.util.ArrayList;
 import java.util.List;
 
-// M02S02 Exercício 01: criar classe Paciente
 public class Paciente {
 
     // Atributos
-    public String nome;
-    public int idade;
-    public double peso;
-    public double altura;
-    public int pressaoSistolica;
-    public int pressaoDiastolica;
-    public int frequenciaCardiaca;
-    public String dietaAlimentar;
-    public List<String> atividadesFisicas = new ArrayList<>();
+    private String nome;
+    private int idade;
+    private double peso;
+    private double altura;
+    private int pressaoSistolica;
+    private int pressaoDiastolica;
+    private int frequenciaCardiaca;
+    private String dietaAlimentar;
+    private List<String> atividadesFisicas;
 
-    // M02S02 Exercício 03: criar métodos
+    // M02S03 Exercício 1: Construtores
+
+    // Construtor vazio
+    public Paciente(){
+        this.atividadesFisicas = new ArrayList<>();
+    };
+
+    // Construtor completo:
+    public Paciente(String nome, int idade, double peso, double altura, int pressaoSistolica, int pressaoDiastolica, int frequenciaCardiaca, String dietaAlimentar) {
+        this.nome = nome;
+        this.idade = idade;
+        this.peso = peso;
+        this.altura = altura;
+        this.pressaoSistolica = pressaoSistolica;
+        this.pressaoDiastolica = pressaoDiastolica;
+        this.frequenciaCardiaca = frequenciaCardiaca;
+        this.dietaAlimentar = dietaAlimentar;
+        this.atividadesFisicas = new ArrayList<>();
+    }
 
     // Métodos
     public double calcularImc() {
@@ -43,5 +60,79 @@ public class Paciente {
         this.atividadesFisicas.add(novaAtividade);
     }
 
+    // Getters
 
+    public String getNome() {
+        return nome;
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+
+    public double getPeso() {
+        return peso;
+    }
+
+    public double getAltura() {
+        return altura;
+    }
+
+    public int getPressaoSistolica() {
+        return pressaoSistolica;
+    }
+
+    public int getPressaoDiastolica() {
+        return pressaoDiastolica;
+    }
+
+    public int getFrequenciaCardiaca() {
+        return frequenciaCardiaca;
+    }
+
+    public String getDietaAlimentar() {
+        return dietaAlimentar;
+    }
+
+    public List<String> getAtividadesFisicas() {
+        return atividadesFisicas;
+    }
+
+    // Setters
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+
+    public void setPeso(double peso) {
+        this.peso = peso;
+    }
+
+    public void setAltura(double altura) {
+        this.altura = altura;
+    }
+
+    public void setPressaoSistolica(int pressaoSistolica) {
+        this.pressaoSistolica = pressaoSistolica;
+    }
+
+    public void setPressaoDiastolica(int pressaoDiastolica) {
+        this.pressaoDiastolica = pressaoDiastolica;
+    }
+
+    public void setFrequenciaCardiaca(int frequenciaCardiaca) {
+        this.frequenciaCardiaca = frequenciaCardiaca;
+    }
+
+    public void setDietaAlimentar(String dietaAlimentar) {
+        this.dietaAlimentar = dietaAlimentar;
+    }
+
+    public void setAtividadesFisicas(List<String> atividadesFisicas) {
+        this.atividadesFisicas = atividadesFisicas;
+    }
 }

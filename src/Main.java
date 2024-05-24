@@ -72,28 +72,28 @@ public class Main {
         System.out.println("Insira os dados de paciente:");
 
         System.out.print("Nome: ");
-        paciente.nome = scanner.next();
+        paciente.setNome(scanner.next());
 
         System.out.print("Idade: ");
-        paciente.idade = Integer.parseInt(scanner.next());
+        paciente.setIdade(Integer.parseInt(scanner.next()));
 
         System.out.print("Peso: ");
-        paciente.peso = Double.parseDouble(scanner.next());
+        paciente.setPeso(Double.parseDouble(scanner.next()));
 
         System.out.print("Altura: ");
-        paciente.altura = Double.parseDouble(scanner.next());
+        paciente.setAltura(Double.parseDouble(scanner.next()));
 
         System.out.print("Pressão sistólica: ");
-        paciente.pressaoSistolica = Integer.parseInt(scanner.next());
+        paciente.setPressaoSistolica(Integer.parseInt(scanner.next()));
 
         System.out.print("Pressão diastólica: ");
-        paciente.pressaoDiastolica = Integer.parseInt(scanner.next());
+        paciente.setPressaoDiastolica(Integer.parseInt(scanner.next()));
 
         System.out.print("Frequência cardíaca: ");
-        paciente.frequenciaCardiaca = Integer.parseInt(scanner.next());
+        paciente.setFrequenciaCardiaca(Integer.parseInt(scanner.next()));
 
         System.out.print("Tipo de dieta alimentar: ");
-        paciente.dietaAlimentar = scanner.next();
+        paciente.setDietaAlimentar(scanner.next());
 
         ListaPacientes.adicionarPaciente(paciente);
     }
@@ -114,17 +114,17 @@ public class Main {
 
         System.out.println("Atualize as informações:");
         System.out.print("Peso: ");
-        paciente.peso = Double.parseDouble(scanner.next());
+        paciente.setPeso(Double.parseDouble(scanner.next()));
         System.out.print("Altura: ");
-        paciente.altura = Double.parseDouble(scanner.next());
+        paciente.setAltura(Double.parseDouble(scanner.next()));
         System.out.print("Pressão sistólica: ");
-        paciente.pressaoSistolica = Integer.parseInt(scanner.next());
+        paciente.setPressaoSistolica(Integer.parseInt(scanner.next()));
         System.out.print("Pressão diastólica: ");
-        paciente.pressaoDiastolica = Integer.parseInt(scanner.next());
+        paciente.setPressaoDiastolica(Integer.parseInt(scanner.next()));
         System.out.print("Frequência cardíaca: ");
-        paciente.frequenciaCardiaca = Integer.parseInt(scanner.next());
+        paciente.setFrequenciaCardiaca(Integer.parseInt(scanner.next()));
         System.out.print("Dieta alimentar: ");
-        paciente.dietaAlimentar = scanner.next();
+        paciente.setDietaAlimentar(scanner.next());
 
         System.out.println("Informações atualizadas.");
         paciente.monitorar();

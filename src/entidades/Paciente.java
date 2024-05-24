@@ -21,7 +21,7 @@ public class Paciente {
     // Construtor vazio
     public Paciente(){
         this.atividadesFisicas = new ArrayList<>();
-    };
+    }
 
     // Construtor completo:
     public Paciente(String nome, int idade, double peso, double altura, int pressaoSistolica, int pressaoDiastolica, int frequenciaCardiaca, String dietaAlimentar) {

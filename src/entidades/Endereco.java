@@ -11,6 +11,8 @@ public class Endereco {
     private String complemento; // Opcional
 
     // Construtores
+    public Endereco() {}
+
     public Endereco(String logradouro, String estado, String cidade, String numero, String cep) {
         this.logradouro = logradouro;
         this.estado = estado;

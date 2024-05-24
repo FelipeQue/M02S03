@@ -2,6 +2,7 @@
 import entidades.Paciente;
 import repositorio.ListaPacientes;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -96,14 +97,18 @@ public class Main {
         paciente.setDietaAlimentar(scanner.next());
 
         ListaPacientes.adicionarPaciente(paciente);
+        System.out.println("Paciente cadastrade com sucesso.");
+
     }
 
-    // M02S02 Exercício 06: Listar pacientes
-    private static void telaListarPacientes() {
-        ListaPacientes.listarPacientes();
+    private static void telaListarPacientes(){
+        System.out.println();
+        System.out.println("Id - Nome");
+        ArrayList<Paciente> pacientes = ListaPacientes.listarPacientes();
+        for (Paciente item : pacientes){
+            System.out.println(pacientes.indexOf(item) + " - " + item.getNome() + ";");
+        }
     }
-    // Como lá na classe ListaPacientes, o prof colocou o método como retornando a Lista (preferível pra funcionar mais como banco de dados)
-    // Aqui neste método é onde fica o loop para printar (ver no github da fullstack).
 
 
     private static void telaAlterarPaciente(Scanner scanner) {

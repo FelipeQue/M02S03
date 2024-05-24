@@ -1,10 +1,7 @@
 package repositorio;
 
 import entidades.Paciente;
-
 import java.util.ArrayList;
-
-// M02S02 Exercício 02: lista de dados
 
 public class ListaPacientes {
 
@@ -18,13 +15,10 @@ public class ListaPacientes {
         pacientes.remove(id);
     }
 
-    public static void listarPacientes(){
-        System.out.println("Id - Nome");
-        for (Paciente item : pacientes){
-            System.out.println(pacientes.indexOf(item) + " - " + item.nome + ";");
-        }
+    public static ArrayList<Paciente> listarPacientes(){
+        return pacientes;
     }
-    // Prof colocou o método acima como retornando Lista
+    // Prof colocou o método acima como retornando Lista - MUDAR AQUI TAMBEM PARA FICAR MAIS REALISTA.
 
     public static Paciente buscarPacienteId(int id){
         return pacientes.get(id);

@@ -18,10 +18,19 @@ public class ListaPacientes {
     public static ArrayList<Paciente> listarPacientes(){
         return pacientes;
     }
-    // Prof colocou o método acima como retornando Lista - MUDAR AQUI TAMBEM PARA FICAR MAIS REALISTA.
 
     public static Paciente buscarPacienteId(int id){
         return pacientes.get(id);
+    }
+
+    public static void alterarPaciente(Paciente pacienteAlteracao, int id){
+        Paciente pacienteOriginal = pacientes.get(id);
+        pacienteOriginal.setPeso(pacienteAlteracao.getPeso());
+        pacienteOriginal.setAltura(pacienteAlteracao.getAltura());
+        pacienteOriginal.setPressaoSistolica(pacienteAlteracao.getPressaoSistolica());
+        pacienteOriginal.setPressaoDiastolica(pacienteAlteracao.getPressaoDiastolica());
+        pacienteOriginal.setFrequenciaCardiaca(pacienteAlteracao.getFrequenciaCardiaca());
+        pacienteOriginal.setDietaAlimentar(pacienteAlteracao.getDietaAlimentar());
     }
 
 

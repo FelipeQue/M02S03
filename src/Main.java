@@ -229,10 +229,15 @@ public class Main {
         Nutricionista nutricionista = new Nutricionista();
         System.out.println("Insira os dados da pessoa nutricionista:");
         scanner.nextLine();
-        System.out.print("Nome: ");
-        nutricionista.setNome(scanner.nextLine());
 
-        // Para o sistema, vamos considerar que o nutricionista deve ter um nome não duplicado; adicione uma validação para isso.
+        System.out.print("Nome: ");
+        String nomeNutricionista = scanner.nextLine();
+        Nutricionista nutricionistaExiste = ListaNutricionistas.buscarNutricionistaNome(nomeNutricionista);
+        if (nutricionistaExiste != null) {
+            System.out.println("Já existe nutricionista com este nome nos nossos registros.");
+            return;
+        }
+        nutricionista.setNome(nomeNutricionista);
 
         System.out.print("Idade: ");
         nutricionista.setIdade(Integer.parseInt(scanner.next()));
@@ -294,7 +299,7 @@ public class Main {
         }
         consulta.setPaciente(nomePaciente);
 
-        System.out.print("Data e horário no formato DD/MM/AAAA HH:MM");
+        System.out.print("Data e horário no formato DD/MM/AAAA HH:MM ");
         consulta.setDataHora(LocalDateTime.parse(scanner.nextLine(), formatter));
 
         consulta.setRealizada(false);
